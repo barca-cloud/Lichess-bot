@@ -9,7 +9,7 @@
 
 ## How to Install on Heroku
 - Import or [Fork](https://github.com/OIVAS7572/lichess-bot/fork) this repository to your Github.
-- Open the `config.yml` file and insert your [API access token](https://lichess.org/account/oauth/token/create?scopes[]=bot:play&description=Lichess+Bot+Token) in to token option and commit changes over [here](/config.yml#L1).
+- Open the `Settings` tab on heroku and insert your [API access token with `bot:play` scopes enabled](https://lichess.org/account/oauth/token/create?scopes[]=bot:play&description=Lichess+Bot+Token) in the `Config vars` field in the format `LICHESS_BOT_TOKEN:API-ACCESS-TOKEN`, where you replace `API-ACCESS-TOKEN` with your API Access token.
 - Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and [create a new app](https://dashboard.heroku.com/new-app) in Heroku. <br/>
 **Do note that in certain operating systems Heroku CLI doesn't get added to path automatically. If that's the case you'll have to add heroku to your path manually.**
 - Run this command in cmd or powershell `heroku stack:set container -a appname`, where `appname` is replaced with your Heroku app's name.
@@ -28,6 +28,8 @@ Opening Books:
 - [Goi5.1.bin](https://gitlab.com/OIVAS7572/Goi5.1.bin/-/raw/master/Goi5.1.bin.7z)
 - [Drawkiller_EloZoom_big.bin](/Drawkiller_EloZoom_big.bin)
 
+**Keep you Forks or Imports Up-to-Date & Check the other Branches in this Repository**
+
 **If you would like to run bot locally on PC, read the [lichess-bot manual](https://github.com/ShailChoksi/lichess-bot#how-to-install).**
 
 ## How to change the engine used?
@@ -44,7 +46,7 @@ Note: Make sure you download a linux binary that is supported by heroku (by defa
 
 #### How to use Stockfish dev
 
-- You can reset link in [16th line in Dockerfile](/Dockerfile#L16) to the Stockfish dev binary link from [abrok.eu/stockfish](http://abrok.eu/stockfish/v)
+- You can reset link in [15th line in Dockerfile](/Dockerfile#L15) to the Stockfish dev binary link from [abrok.eu/stockfish](http://abrok.eu/stockfish/v)
 (You can set this `http://abrok.eu/stockfish/latest/linux/stockfish_x64_modern.zip` link for latest Stockfish dev binary)
 
 **Note: You need to use `Linux x64 for modern computers` binary for Heroku.**
